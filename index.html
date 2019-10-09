@@ -1,0 +1,899 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+   
+
+
+</head>
+
+<body>
+    <div class="grid-container">
+        <!--item1 logo i cały górny pasek ----------------------------------->
+        <div class="item1">
+            <div class="logo"></div>
+            <div class="line">
+                <button href="index.html" class="vendor_web">Vendor</button>
+                <button href="index.html" class="alchemy_web">Alchemy</button>
+            </div>
+        </div>
+        <!--item2 i typy wyboru ---------------------------------------------->
+        <div class="item2">
+            <button class="type_choice" id="weapons" onclick="GoToWeapons()">WEAPONS</button>
+            <button id="Consumable" class="type_choice" onclick="GoToConsumables()">CONSUMABLES</button>
+            <button class="type_choice" onclick="GoToCraftMaterials()">CRAFTING MATERIALS</button>
+            <button class="type_choice" onclick="GoToQuestItem()">QUEST ITEMS</button>
+        </div>
+        
+        <!--item3 i PLAYER -------------------------------------------------->
+        <div class="item3">
+            <div class="h">
+                <div class="header_player">Player </div>
+                <div class="money_player">345$</div>
+            </div>
+           
+            <div class="content">
+                <div class="filtr_by_price_1">
+                    <label class="filtr_label">Filtr by price:</label>
+                    <button class="price_choice" onclick="FindFromTheCheapestPrice()"> $
+                      </button>
+                    <button class="price_choice" onclick="FindFromTheMostExpensivePrice()"> $$$</button>
+                </div>
+    <!--PLAYER-------chaoose weapons -------------------------------------------------->
+                <div id="weaponsPlayer" style="max-height: 450px">
+                    <button class="option" onclick="buttonClick(this)">
+                        <div class="image" id="weapon_1"></div>
+                        <div class="description">
+                            <div id="hammerTitle" class="title">HAMMER KILL</div>
+                            <div id="hammerDescription" class="text"> Use for hard attac with a high power on</div>
+                            <div id="hammerPrice" class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money" > 
+                            </div>
+                        </div>
+                    </button>
+                    <button class="option" onclick="buttonClick(this)">
+                        <div class="image" id="weapon_2"></div>
+                        <div class="description">
+                            <div id="sniperCall" class="title">SNIPER CALL</div>
+                            <div id="sniperCallDescription" class="text"> Be aware of the strength of this weapon</div>
+                            <div id="sniperCallPrice" class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money" > 
+                            </div>
+                        </div>
+                    </button>
+                    <button class="option" onclick="buttonClick(this)">
+                        <div class="image" id="weapon_3"></div>
+                        <div class="description">
+                            <div class="title">RIPPED OFF</div>
+                            <div class="text"> UBe aware of the strength of this weapon</div>
+                            <div class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money" > 
+                            </div>
+                        </div>
+                    </button>
+                    <button class="option" onclick="buttonClick(this)">
+                        <div class="image" id="weapon_4"></div>
+                        <div class="description">
+                            <div class="title">KILLING HAND</div>
+                            <div class="text"> Use for hard attac with a high power on</div>
+                            <div class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money" > 
+                            </div>
+                        </div>
+                    </button>
+                    <button class="option" onclick="buttonClick(this)">
+                        <div class="image" id="weapon_5"></div>
+                        <div class="description">
+                            <div class="title">PRIME DESTROYER</div>
+                            <div class="text"> Use for hard attac with a high power on</div>
+                            <div class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money" > 
+                            
+                            </div>
+                        </div>
+                    </button>
+                    <button class="option" onclick="buttonClick(this)">
+                        <div class="image" id="weapon_6"></div>
+                        <div class="description">
+                            <div class="title">CROSSBOW</div>
+                            <div class="text"> Use for hard attac with a high power on</div>
+                            <div class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money" > 
+                             
+                            </div>
+                        </div>
+                    </button>
+                    <button class="option" onclick="buttonClick(this)">
+                        <div class="image" id="weapon_7"></div>
+                        <div class="description">
+                            <div class="title">LASER HOLE</div>
+                            <div class="text"> Use for hard attac with a high power on</div>
+                            <div class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money" > 
+                         
+                            </div>
+                        </div>
+                    </button>
+                    <button class="option" onclick="buttonClick(this)">
+                        <div class="image" id="weapon_8"></div>
+                        <div class="description">
+                            <div class="title">BLACK SUPRISE</div>
+                            <div class="text"> Use for hard attac with a high power on</div>
+                            <div class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money" > 
+                              
+                            </div>
+                        </div>
+                    </button>
+                </div>
+        
+    <!--PLAYER-------chaoose CONSUMABLES -------------------------------------------------->
+                <div id="consumablesPlayer" style="max-height: 450px; display:none">
+                    <button class="option" onclick="buttonClick(this)">
+                        <div class="image" id="consumables_5"></div>
+                        <div class="description">
+                            <div class="title">ARCHIWUM X</div>
+                            <div class="text">Magic drink with a power</div>
+                            <div class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money" > 
+                                
+                            </div>
+                        </div>
+                    </button>
+                    <button class="option" onclick="buttonClick(this)">
+                        <div class="image" id="consumables_6"></div>
+                        <div class="description">
+                            <div class="title"> SCIENTY FAM</div>
+                            <div class="text">Magic drink with a power</div>
+                            <div class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money" > 
+                             
+                            </div>
+                        </div>
+                    </button>
+                    <button class="option" onclick="buttonClick(this)">
+                        <div class="image" id="consumables_2"></div>
+                        <div class="description">
+                            <div class="title">AID KIT</div>
+                            <div class="text"> This aid kit save your life</div>
+                            <div class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money" > 
+                         
+                            </div>
+                        </div>
+                    </button>
+                    <button class="option" onclick="buttonClick(this)">
+                        <div class="image" id="consumables_7"></div>
+                        <div class="description">
+                            <div class="title">LOOSE MY MIND</div>
+                            <div class="text">Magic drink with a power</div>
+                            <div class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money" > 
+                              
+                            </div>
+                        </div>
+                    </button>
+                    <button class="option" onclick="buttonClick(this)">
+                        <div class="image" id="consumables_3"></div>
+                        <div class="description">
+                            <div class="title">BOWL LIX</div>
+                            <div class="text"> Magic drink with a power</div>
+                            <div class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money" > 
+                              
+                            </div>
+                        </div>
+                    </button>
+                </div>
+   
+    <!--PLAYER-------chaoose CRAFTING MATERIALS -------------------------------------------------->
+                <div id="craftingMaterialsPlayer" style="max-height: 450px; display:none">
+                    <button class="option" onclick="buttonClick(this)">
+                        <div class="image" id="crafting_materials_3"></div>
+                        <div class="description">
+                            <div class="title">RED ROCK</div>
+                            <div class="text"> You can craft with this item something amazing</div>
+                            <div class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money" > 
+                        
+                            </div>
+                        </div>
+                    </button>
+                    <button class="option" onclick="buttonClick(this)">
+                        <div class="image" id="crafting_materials_4"></div>
+                        <div class="description">
+                            <div class="title">SHARP THING</div>
+                            <div class="text"> You can craft with this item something amazing</div>
+                            <div class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money" > 
+                    
+                            </div>
+                        </div>
+                    </button>
+                    <button class="option" onclick="buttonClick(this)">
+                        <div class="image" id="crafting_materials_5"></div>
+                        <div class="description">
+                            <div class="title">WHITE CRISTAL</div>
+                            <div class="text"> You can craft with this item something amazing</div>
+                            <div class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money" > 
+               
+                            </div>
+                        </div>
+                    </button>
+                    <button class="option" onclick="buttonClick(this)">
+                        <div class="image" id="crafting_materials_6"></div>
+                        <div class="description">
+                            <div class="title"> WOOD</div>
+                            <div class="text"> You can craft with this item something amazing</div>
+                            <div class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money" > 
+                            
+                            </div>
+                        </div>
+                    </button>
+                    <button class="option" onclick="buttonClick(this)">
+                        <div class="image" id="crafting_materials_8"></div>
+                        <div class="description">
+                            <div class="title">ELEPHANT BONE</div>
+                            <div class="text"> You can craft with this item something amazing</div>
+                            <div class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money" > 
+                           
+                            </div>
+                        </div>
+                    </button>
+                </div>
+     <!--PLAYER-------chaoose QUEST ITEMS -------------------------------------------------->
+                <div id="questItemPlayer" style="max-height: 450px; display:none">
+                    <button class="option" onclick="buttonClick(this)">
+                        <div class="image" id="quest_items_3"></div>
+                        <div class="description">
+                            <div class="title">CLEOPATHRE'S NECKLACE</div>
+                            <div class="text"> Usable item to help you pass level</div>
+                            <div class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money" > 
+                            </div>
+                        </div>
+                    </button>
+                    <button class="option" onclick="buttonClick(this)">
+                        <div class="image" id="quest_items_4"></div>
+                        <div class="description">
+                            <div class="title">HAPPY TALISHMAN</div>
+                            <div class="text"> Usable item to help you pass level</div>
+                            <div class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money" > 
+                            </div>
+                        </div>
+                    </button>
+                    <button class="option" onclick="buttonClick(this)">
+                        <div class="image" id="quest_items_5"></div>
+                        <div class="description">
+                            <div class="title">SPY EYE</div>
+                            <div class="text"> Usable item to help you pass level</div>
+                            <div class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money" > 
+                            </div>
+                        </div>
+                    </button>
+                    <button class="option" onclick="buttonClick(this)">
+                        <div class="image" id="quest_items_6"></div>
+                        <div class="description">
+                            <div class="title">ARCHIVAL BOOK</div>
+                            <div class="text"> Usable item to help you pass level</div>
+                            <div class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money" > 
+                            </div>
+                        </div>
+                    </button>
+                    <button class="option" onclick="buttonClick(this)">
+                        <div class="image" id="quest_items_8"></div>
+                        <div class="description">
+                            <div class="title">TREASURE FINDING</div>
+                            <div class="text"> Usable item to help you pass level</div>
+                            <div class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money" > 
+                            </div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+        <!--item4 i vendor ------------------------------------------------->
+
+        <div class="item4">
+            <div class="h">
+                <div class="header_player">Vendor</div>
+                <div class="money_player">1245$</div>
+            </div>
+            <div class="content">
+                <div class="filtr_by_price_1">
+                    <label class="filtr_label">Filtr by price:</label>
+                    <button class="price_choice" onclick="FindFromTheCheapestPrice()"> $
+                        </button>
+                    <button class="price_choice" onclick="FindFromTheMostExpensivePrice()"> $$$</button>
+                </div>
+        <!--VENDOR-------chaoose weapons -------------------------------------------------->
+                <div id="weaponsVendor" style="max-height: 450px">
+                    <button class="option" onclick="buttonClick(this)">
+                        <div class="image" id="weapon_41"></div>
+                        <div class="description">
+                            <div class="title">SHOTGUN POW</div>
+                            <div class="text"> Full tank of powers to kill the army</div>
+                            <div class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money" > 
+                            </div>
+                        </div>
+                    </button>
+                    <button class="option" onclick="buttonClick(this)">
+                        <div class="image" id="weapon_42"></div>
+                        <div class="description">
+                            <div class="title">SHARP SHARK</div>
+                            <div class="text"> Use for hard attac with a high power on</div>
+                            <div class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money" > 
+                            </div>
+                        </div>
+                    </button>
+                    <button class="option" onclick="buttonClick(this)">
+                        <div class="image" id="weapon_43"></div>
+                        <div class="description">
+                            <div class="title">MACHINE GUN</div>
+                            <div class="text"> Use for hard attac with a high power on</div>
+                            <div class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money" > 
+                            </div>
+                        </div>
+                    </button>
+                    <button class="option" onclick="buttonClick(this)">
+                        <div class="image" id="weapon_44"></div>
+                        <div class="description">
+                            <div class="title">KILLING HAND</div>
+                            <div class="text"> Use for hard attac with a high power on</div>
+                            <div class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money" > 
+                                <img src="icons/tick.png" class="icon_got_it" alt="you've got it" > 
+                            </div>
+                        </div>
+                    </button>
+                    <button class="option" onclick="buttonClick(this)">
+                        <div class="image" id="weapon_45"></div>
+                        <div class="description">
+                            <div class="title">SNIPER CALL</div>
+                            <div class="text"> Use for hard attac with a high power on</div>
+                            <div class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money" > 
+                                <img src="icons/tick.png" class="icon_got_it" alt="you've got it" > 
+                            </div>
+                        </div>
+                    </button>
+                    <button class="option" onclick="buttonClick(this)">
+                        <div class="image" id="weapon_46"></div>
+                        <div class="description">
+                            <div class="title">CHOPPER BLAST</div>
+                            <div class="text"> Use for hard attac with a high power on</div>
+                            <div class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money" > 
+                            </div>
+                        </div>
+                    </button>
+                    <button class="option" onclick="buttonClick(this)">
+                        <div class="image" id="weapon_47"></div>
+                        <div class="description">
+                            <div class="title">FORCE LANCE</div>
+                            <div class="text"> Use for hard attac with a high power on</div>
+                            <div class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money" > 
+                            </div>
+                        </div>
+                    </button>
+                    <button class="option" onclick="buttonClick(this)">
+                        <div class="image" id="weapon_48"></div>
+                        <div class="description">
+                            <div class="title">DEADLY SAW</div>
+                            <div class="text"> Use for hard attac with a high power on</div>
+                            <div class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money" > 
+                            </div>
+                        </div>
+                    </button>
+                    <button class="option" onclick="buttonClick(this)">
+                        <div class="image" id="weapon_49"></div>
+                        <div class="description">
+                            <div class="title">RIPPED OFF</div>
+                            <div class="text"> Use for hard attac with a high power on</div>
+                            <div class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money" > 
+                                <img src="icons/tick.png" class="icon_got_it" alt="you've got it" > 
+                            </div>
+                        </div>
+                    </button>
+                    <button class="option" onclick="buttonClick(this)">
+                        <div class="image" id="weapon_50"></div>
+                        <div class="description">
+                            <div class="title">BLOODY EDGE</div>
+                            <div class="text"> Use for hard attac with a high power on</div>
+                            <div class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money" > 
+                            </div>
+                        </div>
+                    </button>
+                    <button class="option" onclick="buttonClick(this)">
+                        <div class="image" id="weapon_51"></div>
+                        <div class="description">
+                            <div class="title">HAMMER KILL</div>
+                            <div class="text"> Use for hard attac with a high power on</div>
+                            <div class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money" > 
+                                <img src="icons/tick.png" class="icon_got_it" alt="you've got it" > 
+                            </div>
+                        </div>
+                    </button>
+                    <button class="option" onclick="buttonClick(this)">
+                        <div class="image" id="weapon_52"></div>
+                        <div class="description">
+                            <div class="title">BLACK SUPRISE</div>
+                            <div class="text"> Use for hard attac with a high power on</div>
+                            <div class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money" > 
+                                <img src="icons/tick.png" class="icon_got_it" alt="you've got it" > 
+                            </div>
+                        </div>
+                    </button>
+                    <button class="option" onclick="buttonClick(this)">
+                        <div class="image" id="weapon_53"></div>
+                        <div class="description">
+                            <div class="title">CROSSBOW</div>
+                            <div class="text"> Use for hard attac with a high power on</div>
+                            <div class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money" > 
+                                <img src="icons/tick.png" class="icon_got_it" alt="you've got it" > 
+                            </div>
+                        </div>
+                    </button>
+                    <button class="option" onclick="buttonClick(this)">
+                        <div class="image" id="weapon_54"></div>
+                        <div class="description">
+                            <div class="title">LASER HOLE</div>
+                            <div class="text"> Use for hard attac with a high power on</div>
+                            <div class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money" > 
+                                <img src="icons/tick.png" class="icon_got_it" alt="you've got it" > 
+                            </div>
+                        </div>
+                    </button>
+                    <button class="option" onclick="buttonClick(this)">
+                        <div class="image" id="weapon_55"></div>
+                        <div class="description">
+                            <div class="title">MAGIC WAND</div>
+                            <div class="text"> Use for hard attac with a high power on</div>
+                            <div class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money" > 
+                            </div>
+                        </div>
+                    </button>
+                    <button class="option" onclick="buttonClick(this)">
+                        <div class="image" id="weapon_56"></div>
+                        <div class="description">
+                            <div class="title">PRIME DESTROYER</div>
+                            <div class="text"> Use for hard attac with a high power on</div>
+                            <div class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money" > 
+                                <img src="icons/tick.png" class="icon_got_it" alt="you've got it" > 
+                            </div>
+                        </div>
+                    </button>
+                    <button class="option" onclick="buttonClick(this)">
+                        <div class="image" id="weapon_57"></div>
+                        <div class="description">
+                            <div class="title">PINKY LAINER</div>
+                            <div class="text"> Use for hard attac with a high power on</div>
+                            <div class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money" > 
+                            </div>
+                        </div>
+                    </button>
+                </div>
+        <!--VENDOR-------chaoose CONSUMABLES -------------------------------------------------->
+                <div id="consumablesVendor" style="max-height: 450px; display:none">
+                    <button class="option">
+                        <div class="image" id="consumables_1"></div>
+                        <div class="description">
+                            <div class="title">DRAGON POWER</div>
+                            <div class="text"> Magic drink with a power</div>
+                            <div class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money" > 
+                          
+                            </div>
+                        </div>
+                    </button>
+                    <button class="option" onclick="buttonClick(this)">
+                        <div class="image" id="consumables_2"></div>
+                        <div class="description">
+                            <div class="title">AID KIT</div>
+                            <div class="text"> This aid kit save your life</div>
+                            <div class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money" > 
+                                <img src="icons/tick.png" class="icon_got_it" alt="you've got it" > 
+                           
+                            </div>
+                        </div>
+                    </button>
+                    <button class="option" onclick="buttonClick(this)">
+                           <div class="image" id="consumables_3"></div>
+                        <div class="description">
+                            <div class="title">BOWL LIX</div>
+                            <div class="text"> Magic drink with a power</div>
+                            <div class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money" > 
+                                <img src="icons/tick.png" class="icon_got_it" alt="you've got it" > 
+                            </div>
+                        </div>
+                    </button>
+                    <button class="option" onclick="buttonClick(this)">
+                        <div class="image" id="consumables_4"></div>
+                        <div class="description">
+                            <div class="title">FUMME LOOSE</div>
+                            <div class="text"> Magic drink with a power</div>
+                            <div class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money" > 
+                           
+                            </div>
+                        </div>
+                    </button>
+                    <button class="option" onclick="buttonClick(this)">
+                        <div class="image" id="consumables_5"></div>
+                        <div class="description">
+                            <div class="title">ARCHIWUM X</div>
+                            <div class="text">Magic drink with a power</div>
+                            <div class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money" > 
+                                <img src="icons/tick.png" class="icon_got_it" alt="you've got it" > 
+                            </div>
+                        </div>
+                    </button>
+                    <button class="option" onclick="buttonClick(this)">
+                        <div class="image" id="consumables_6"></div>
+                        <div class="description">
+                            <div class="title"> SCIENTY FAM</div>
+                            <div class="text">Magic drink with a power</div>
+                            <div class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money" > 
+                                <img src="icons/tick.png" class="icon_got_it" alt="you've got it" > 
+                            </div>
+                        </div>
+                    </button>
+                    <button class="option" onclick="buttonClick(this)">
+                        <div class="image" id="consumables_7"></div>
+                        <div class="description">
+                            <div class="title">LOOSE MY MIND</div>
+                            <div class="text">Magic drink with a power</div>
+                            <div class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money" > 
+                                <img src="icons/tick.png" class="icon_got_it" alt="you've got it" > 
+                            </div>
+                        </div>
+                    </button>
+                    <button class="option" onclick="buttonClick(this)">
+                        <div class="image" id="consumables_8"></div>
+                        <div class="description">
+                            <div class="title">CREEPY EYES</div>
+                            <div class="text">Magic drink with a power</div>
+                            <div class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money" > 
+                           
+                            </div>
+                        </div>
+                    </button>
+                </div>
+<!--VENDOR-------chaoose CRAFTING MATERIALS -------------------------------------------------->
+                <div id="craftingMaterialsVendor" style="max-height: 450px; display:none">
+                    <button class="option">
+                        <div class="image" id="crafting_materials_1"></div>
+                        <div class="description">
+                            <div class="title">POISSING PLANT</div>
+                            <div class="text"> You can craft with this item something amazing</div>
+                            <div class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money" > 
+                            </div>
+                        </div>
+                    </button>
+                    <button class="option">
+                        <div class="image" id="crafting_materials_2"></div>
+                        <div class="description">
+                            <div class="title">CREEPER JUICE</div>
+                            <div class="text"> You can craft with this item something amazing</div>
+                            <div class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money" > 
+                            </div>
+                        </div>
+                    </button>               
+                    <button class="option">
+                        <div class="image" id="crafting_materials_3"></div>
+                        <div class="description">
+                            <div class="title">RED ROCK</div>
+                            <div class="text"> You can craft with this item something amazing</div>
+                            <div class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money" > 
+                                <img src="icons/tick.png" class="icon_got_it" alt="you've got it" > 
+                            </div>
+                        </div>
+                    </button>
+                    <button class="option">
+                        <div class="image" id="crafting_materials_4"></div>
+                        <div class="description">
+                            <div class="title">SHARP THING</div>
+                            <div class="text"> You can craft with this item something amazing</div>
+                            <div class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money" > 
+                                <img src="icons/tick.png" class="icon_got_it" alt="you've got it" > 
+                            </div>
+                        </div>
+                    </button>
+
+                    <button class="option">
+                        <div class="image" id="crafting_materials_5"></div>
+                        <div class="description">
+                            <div class="title">WHITE CRISTAL</div>
+                            <div class="text"> You can craft with this item something amazing</div>
+                            <div class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money" > 
+                                <img src="icons/tick.png" class="icon_got_it" alt="you've got it" > 
+                            </div>
+                        </div>
+                    </button>
+                    <button class="option">
+                        <div class="image" id="crafting_materials_6"></div>
+                        <div class="description">
+                            <div class="title"> WOOD</div>
+                            <div class="text"> You can craft with this item something amazing</div>
+                            <div class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money" > 
+                                <img src="icons/tick.png" class="icon_got_it" alt="you've got it" > 
+                            </div>
+                        </div>
+                    </button>
+
+                    <button class="option">
+                        <div class="image" id="crafting_materials_7"></div>
+                        <div class="description">
+                            <div class="title">PAPER </div>
+                            <div class="text"> You can craft with this item something amazing</div>
+                            <div class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money" > 
+                            </div>
+                        </div>
+                    </button>
+                    <button class="option">
+                        <div class="image" id="crafting_materials_8"></div>
+                        <div class="description">
+                            <div class="title">ELEPHANT BONE</div>
+                            <div class="text"> You can craft with this item something amazing</div>
+                            <div class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money" > 
+                                <img src="icons/tick.png" class="icon_got_it" alt="you've got it" > 
+                            </div>
+                        </div>
+                    </button>
+                </div>
+ <!--VENDOR-------chaoose QUEST ITEMS -------------------------------------------------->
+                <div id="questItemsVendor" style="max-height: 450px; display:none">
+                    <button class="option">
+                        <div class="image" id="quest_items_1"></div>
+                        <div class="description">
+                            <div class="title">MAGIC KEY</div>
+                            <div class="text"> Usable item to help you pass level </div>
+                            <div class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money" > 
+                            </div>
+                        </div>
+                    </button>
+                    <button class="option" onclick="buttonClick(this)">
+                        <div class="image" id="quest_items_2"></div>
+                        <div class="description">
+                            <div class="title">POWER RING</div>
+                            <div class="text"> Usable item to help you pass level</div>
+                            <div class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money"> 
+                            </div>
+                        </div>
+                    </button>         
+                    <button class="option" onclick="buttonClick(this)">
+                            <div class="image" id="quest_items_3"></div>
+                            <div class="description">
+                                <div class="title">CLEOPATHRE'S NECKLACE</div>
+                                <div class="text"> Usable item to help you pass level</div>
+                                <div class="price_of_item">29.9$
+                                    <div class="small_price"></div>
+                                    <img src="icons/money.png" class="icon_money" alt="money" > 
+                                    <img src="icons/tick.png" class="icon_got_it" alt="you've got it" > 
+                                </div>
+                            </div>
+                        </button>
+                    <button class="option" onclick="buttonClick(this)">
+                            <div class="image" id="quest_items_4"></div>
+                            <div class="description">
+                                <div class="title"> HAPPY TALISHMAN</div>
+                                <div class="text"> Usable item to help you pass level</div>
+                                <div class="price_of_item">29.9$
+                                    <div class="small_price"></div>
+                                    <img src="icons/money.png" class="icon_money" alt="money" > 
+                                    <img src="icons/tick.png" class="icon_got_it" alt="you've got it" > 
+                                </div>
+                            </div>
+                        </button> 
+                    <button class="option" onclick="buttonClick(this)">
+                                <div class="image" id="quest_items_5"></div>
+                                <div class="description">
+                                    <div class="title">SPY EYE</div>
+                                    <div class="text"> Usable item to help you pass level</div>
+                                    <div class="price_of_item">29.9$
+                                        <div class="small_price"></div>
+                                        <img src="icons/money.png" class="icon_money" alt="money" > 
+                                        <img src="icons/tick.png" class="icon_got_it" alt="you've got it" > 
+                                    </div>
+                                </div>
+                            </button>
+                    <button class="option" onclick="buttonClick(this)">
+                        <div class="image" id="quest_items_6"></div>
+                        <div class="description">
+                            <div class="title">ARCHIVAL BOOK</div>
+                            <div class="text"> Usable item to help you pass level</div>
+                            <div class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money" > 
+                                <img src="icons/tick.png" class="icon_got_it" alt="you've got it" > 
+                            </div>
+                        </div>
+                    </button>
+                    <button class="option" onclick="buttonClick(this)">
+                        <div class="image" id="quest_items_7"></div>
+                        <div class="description">
+                            <div class="title">LETTERS WITH A CLUE</div>
+                            <div class="text"> Usable item to help you pass level</div>
+                            <div class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money" > 
+                            </div>
+                        </div>
+                    </button>
+                    <button class="option" onclick="buttonClick(this)">
+                        <div class="image" id="quest_items_8"></div>
+                        <div class="description">
+                            <div class="title"> TREASURE FINDING</div>
+                            <div class="text"> Usable item to help you pass level</div>
+                            <div class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money" > 
+                                <img src="icons/tick.png" class="icon_got_it" alt="you've got it" > 
+                            </div>
+                        </div>
+                    </button>
+                    <button class="option" onclick="buttonClick(this)">
+                        <div class="image" id="quest_items_9"></div>
+                        <div class="description">
+                            <div class="title"> SOPORIFIC BELL</div>
+                            <div class="text"> Usable item to help you pass level</div>
+                            <div class="price_of_item">29.9$
+                                <div class="small_price"></div>
+                                <img src="icons/money.png" class="icon_money" alt="money" > 
+                            </div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        <!--item5  i LISTA ZAKUPÓW -------------------------------------------------->
+        <div class="item5">
+            <div class="headline">
+                <label class="main_item"> SHOPPING CART</label>
+                <label class="items"> ITEMS: </label>
+                <label class="items"> 5 </label>
+            </div>
+            <div class="sum_box" style="max-height: 450px">
+                
+            </div>
+            <div class="you_pay">YOU PAY:
+            <div class="sum_up">109$</div>
+            
+          
+           
+            
+            </div>
+        </div>
+        <!--item6 i footer-------------------------------------------------->
+        <div class="item6">
+            <label class="bottom_text">Get ready for the unexpected. Envireoment here is not safe at all.  Be aware of danger comming up on your way. Take weapons and all the items you need. Hurry up.</label>
+            <button class="buttons">Close</button>
+            <button class="buttons">Confirm</button>
+        </div>
+    </div>
+
+
+
+        <canvas id="canvas"></canvas>
+        <script src="./skrypt.js"></script>
+</body>
+
+</html>
+
+<script>
+
+    function FindFromTheCheapestPrice() {
+        document.getElementById("content").innerHTML = "funkcja filtrujaca od najmniejszej ceny do najwiekszej";
+
+
+    }
+
+    function FindFromTheMostExpensivePrice() {
+        document.getElementById("content").innerHTML = "funkcja filtrujaca od najwiekszej ceny do najmniejszej!";
+
+
+    }
+</script>

@@ -1,0 +1,746 @@
+@font-face {
+    src: url(fonts/Segoe-UI.ttf);
+    font-family: seo;
+}
+
+* {
+    font-family: seo;
+    padding: 0;
+    margin: 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 12% 30% 30% 28%;
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+.grid-container>div {
+    text-align: center;
+    padding: 5px 0;
+    font-size: 30px;
+    width: auto;
+    height: auto;
+}
+
+.item1 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+
+.item6 {
+    grid-column-start: 5;
+    grid-column-end: 1;
+}
+
+
+/*   ----------------------------------------logo i cała góra -----------    */
+
+.item1 {
+    display: inline-flex;
+}
+
+.logo {
+    display: inline;
+    background-image: url("icons/logo.png");
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 50px;
+    width: 15%;
+    margin-left: 25px;
+   
+}
+
+.line {
+    background-image: url("icons/group_2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 50px;
+    width: 90%;
+
+}
+
+.vendor_web{
+    font-family: seo;
+    font-size: 15px;
+    color: #34CBC2;
+    background-color: #1A1515;
+    border:none;
+    vertical-align: text-top;
+    margin-left: 50px;
+    
+}
+
+.alchemy_web{
+    font-family: seo;
+    font-size: 15px;
+    background-color: #1A1515;
+    border:none;
+    vertical-align: text-top;
+    color: white;
+
+}
+
+.alchemy_web:hover{
+    color: #34CBC2;
+}
+
+/*   ---------------------------------------typy wyboru -----------    */
+
+.item2 {
+    display: block;
+}
+
+.type_choice {
+    width: 80%;
+    height: 80px;
+    display: block;
+    border: 1px solid #34CBC2;
+    background-color: #1A1515;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    margin: 5px 20px;
+    vertical-align: middle;
+    font-family: seo;
+}
+
+
+#weapons {
+    margin-top: 80px;
+}
+
+.type_choice:hover{
+    background-color: #20413E;
+    border-color:  #20413E;
+
+}
+
+/*   ----------------------------------------item3 PLAYER -----------    */
+
+.item3 {
+    font-size: 20px;
+    max-width: 400px;
+    height: 70vh;
+}
+.h{
+    display: inline-flex;
+    width: 100%;
+}
+
+.money_player{
+    width: 75%;
+    text-align: right;
+    color: white;
+    font-size: 25;
+}
+
+.header_player {
+    height: 30px;
+    width: 50%;
+    border-top: 1px solid #34CBC2;
+    border-left: 1px solid #34CBC2;
+    border-right: 1px solid #34CBC2;
+    border-radius: 0.5em 45em 0 0;
+    color: white;
+    font-size: 20;
+    vertical-align: baseline;
+    text-align: left;
+    padding-left: 5px;
+   
+}
+.header_player > .money_player{
+    display: inline-flex;
+}
+
+
+.content {
+    height: 90%;
+    width: auto;
+    border: 1px solid #34CBC2;
+    color: white;
+    font-size: 24;
+    overflow: auto;
+}
+/*   ----------------------------------------content slider-----------    */
+
+.content::-webkit-scrollbar {
+    width: 0.2em;
+}
+
+.content::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+.content::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 0.5px solid slategrey;
+}
+.filtr_by_price_1 {
+    display: inline-flex;
+    padding: 0;
+    margin: 0;
+    height: 10%;
+    width: 100%;
+}
+
+.filtr_label {
+    width: 180px;
+    font-size: 15px;
+    vertical-align: middle;
+    color: #34CBC2;
+    text-align: center;
+    margin-top: 8px;
+    margin-left: 5px;
+}
+
+.price_choice {
+    border: 1px solid #34CBC2;
+    color: #34CBC2;
+    margin: 5px 10px;
+    background-color: #1A1515;
+    width: 65%;
+}
+
+.price_choice:hover{
+    background-color: #20413E;
+    border-color:  #20413E;
+    color: white;
+
+}
+
+.option {
+    width: 90%;
+    height: auto;
+    border: 1px solid #34CBC2;
+    margin: 5px 10px;
+    display: inline-flex;
+}
+
+.option:hover{
+    background-color: #20413E;
+    border-color:  #20413E;
+}
+
+.image {
+    width: 50%;
+    height: 80px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 5px auto;
+}
+
+#weapon_1 {
+    background-image: url("weapons/8.png");
+}
+
+#weapon_2 {
+    background-image: url("weapons/1.png");
+}
+
+#weapon_3 {
+    background-image: url("weapons/7.png");
+}
+
+#weapon_4 {
+    background-image: url("weapons/6.png");
+}
+#weapon_5 {
+    background-image: url("weapons/8.png");
+}
+
+#weapon_6 {
+    background-image: url("weapons/1.png");
+}
+
+#weapon_7 {
+    background-image: url("weapons/7.png");
+}
+
+#weapon_8 {
+    background-image: url("weapons/6.png");
+}
+#quest_items_1 {
+    background-image: url("quest_items/1.jpg");
+}
+
+#quest_items_2 {
+    background-image: url("quest_items/2.png");
+}
+
+#quest_items_3 {
+    background-image: url("quest_items/3.png");
+}
+
+#quest_items_4 {
+    background-image: url("quest_items/4.png");
+}
+#quest_items_5 {
+    background-image: url("quest_items/5.png");
+}
+#quest_items_6 {
+    background-image: url("quest_items/6.png");
+}
+
+#quest_items_7 {
+    background-image: url("quest_items/7.png");
+}
+
+#quest_items_8 {
+    background-image: url("quest_items/8.png");
+}
+#quest_items_9 {
+    background-image: url("quest_items/9.png");
+}
+
+#crafting_materials_1 {
+    background-image: url("crafting_materials/12.png");
+}
+
+#crafting_materials_2{
+    background-image: url("crafting_materials/1.png");
+}
+
+#crafting_materials_3 {
+    background-image: url("crafting_materials/3.png");
+}
+#crafting_materials_4 {
+    background-image: url("crafting_materials/4.png");
+}
+#crafting_materials_5 {
+    background-image: url("crafting_materials/5.png");
+}
+
+#crafting_materials_6 {
+    background-image: url("crafting_materials/6.png");
+}
+
+#crafting_materials_7{
+    background-image: url("crafting_materials/7.png");
+}
+#crafting_materials_8 {
+    background-image: url("crafting_materials/8.png");
+}
+
+#consumables_1 {
+    background-image: url("consumables/7.png");
+}
+
+#consumables_2{
+    background-image: url("consumables/2.png");
+}
+
+#consumables_3 {
+    background-image: url("consumables/3.png");
+}
+#consumables_4 {
+    background-image: url("consumables/4.png");
+}
+#consumables_5 {
+    background-image: url("consumables/5.png");
+}
+
+#consumables_6 {
+    background-image: url("consumables/6.png");
+}
+
+#consumables_7{
+    background-image: url("consumables/14.png");
+}
+#consumables_8 {
+    background-image: url("consumables/19.png");
+}
+
+.description {
+    width: 50%;
+    height: auto;
+    text-align: left;
+    color: #34CBC2;
+    font-size: 15px;
+    font-family: seo;
+    margin: 5px auto;
+}
+
+.text,
+.price_of_item {
+    color: white;
+    font-size: 15px;
+}
+
+.price_of_item {
+    display: inline-flex;
+}
+
+.small_price {
+    font-size: 10px;
+}
+
+.icon_money {
+    width: 30%;
+}
+
+
+/*   ----------------------------------------item4 Vendor -----------    */
+
+.item4 {
+    font-size: 20px;
+    max-width: 400px;
+    height: 70vh;
+}
+
+.header_player {
+    height: 30px;
+    width: 20%;
+    border-top: 1px solid #34CBC2;
+    border-left: 1px solid #34CBC2;
+    border-right: 1px solid #34CBC2;
+    border-radius: 0.5em 45em 0 0;
+    color: white;
+    font-size: 20;
+    vertical-align: baseline;
+}
+
+.content {
+    height: 90%;
+    width: auto;
+    border: 1px solid #34CBC2;
+    color: white;
+    font-size: 24;
+    overflow: auto;
+}
+
+.filtr_by_price_1 {
+    display: inline-flex;
+    padding: 0;
+    margin: 0;
+    height: 10%;
+    width: 100%;
+}
+
+.filtr_label {
+    width: 180px;
+    font-size: 15px;
+    vertical-align: middle;
+    color: #34CBC2;
+    text-align: center;
+    margin-top: 8px;
+    margin-left: 5px;
+}
+
+.price_choice {
+    border: 1px solid #34CBC2;
+    color: #34CBC2;
+    margin: 5px 10px;
+    background-color: #1A1515;
+    width: 65%;
+}
+.image {
+    width: 50%;
+    height: 80px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 5px auto;
+}
+.option {
+    width: 90%;
+    height: auto;
+    background-color: #1A1515;
+    border: 1px solid #34CBC2;
+    margin: 5px 10px;
+    display: inline-flex;
+}
+
+
+#weapon_41 {
+    background-image: url("weapons/12.png");
+}
+
+#weapon_42 {
+    background-image: url("weapons/14.png");
+}
+
+#weapon_43 {
+    background-image: url("weapons/16.png");
+}
+
+#weapon_44 {
+    background-image: url("weapons/6.png");
+}
+#weapon_45 {
+    background-image: url("weapons/1.png");
+}
+#weapon_46 {
+    background-image: url("weapons/2.png");
+}
+
+#weapon_47 {
+    background-image: url("weapons/3.png");
+}
+
+#weapon_48 {
+    background-image: url("weapons/5.png");
+}
+
+#weapon_49 {
+    background-image: url("weapons/7.png");
+}
+#weapon_50 {
+    background-image: url("weapons/10.png");
+}
+#weapon_51 {
+    background-image: url("weapons/8.png");
+}
+
+#weapon_52 {
+    background-image: url("weapons/13.png");
+}
+#weapon_53 {
+    background-image: url("weapons/17.png");
+}
+
+#weapon_54 {
+    background-image: url("weapons/18.png");
+}
+#weapon_55 {
+    background-image: url("weapons/20.png");
+}
+#weapon_56 {
+    background-image: url("weapons/21.png");
+}
+#weapon_57 {
+    background-image: url("weapons/22.png");
+}
+.description {
+    width: 50%;
+    height: auto;
+    text-align: left;
+    color: #34CBC2;
+    font-size: 15px;
+    font-family: seo;
+    margin: 5px auto;
+}
+
+.text,
+.price_of_item {
+    color: white;
+    font-size: 15px;
+}
+
+.price_of_item {
+    display: inline-flex;
+}
+
+.small_price {
+    font-size: 10px;
+}
+
+.icon_money {
+    width: 20px;
+    height: 20px;
+   
+}
+
+.icon_got_it {
+    width: 20px;
+    height: 20px;
+    margin-left: 85px;
+   
+}
+/*   ----------------------------------------item 5 lista zakupow -----------    */
+
+.item5 {
+    font-size: 15px;
+    color: #34CBC2;
+    font-family: seo;
+    width: auto;
+    margin-right: 20px;
+}
+
+.headline {
+    font-size: 15px;
+    color: #34CBC2;
+    display: inline-flex;
+}
+
+.main_item {
+    text-align: left;
+    margin-right: 150px;
+}
+
+.items {
+    text-align: right;
+    margin-right: 5px;
+    font-size: 12px;
+}
+
+.sum_box {
+    border-top: 1px solid #34CBC2;
+    border-bottom: 1px solid #34CBC2;
+    width: auto;
+    display: block;
+    font-size: 15px;
+    color: white;
+    font-family: seo;  
+    text-align: left;
+    margin: auto;
+    overflow: auto;
+    
+}
+
+.box1{
+    display: inline-flex;
+    width: 75%;
+   
+}
+.box2{
+    display: inline-flex;
+    width: 25%;
+
+}
+
+.sum_box::-webkit-scrollbar {
+    width: 0.2em;
+}
+
+.sum_box::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+.sum_box::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 0.5px solid slategrey;
+}
+
+
+button#weaponAdd{
+    background-image: url("icons/plus.png");
+    height: 20px;
+    width: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #1A1515;
+    border: none;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+button#weaponRemove{
+    background-image: url("icons/minus.png");
+    height: 20px;
+    width: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #1A1515;
+    border: none;
+}
+
+.you_pay{
+    font-size: 20px;
+    color: #34CBC2;
+    font-family: seo;  
+    display: inline-flex;
+}
+
+.sum_up{
+    font-size: 20px;
+    color: white;
+    font-family: seo;  
+    margin-left: 50px;
+}
+
+
+.submission{
+    display: block;
+    color: #34CBC2;
+    height: 15px;
+}
+
+.clear_cart, .buy{
+    display: block;
+}
+
+
+
+
+
+/*   ----------------------------------------footer -----------    */
+
+.item6 {
+    display: inline-flex;
+    font-size: 15px;
+    font-family: seo;
+}
+
+.buttons {
+    color: #34CBC2;
+    height: 20px;
+    width: 10%;
+    background-color: #1A1515;
+    border: 1px solid #34CBC2;
+    margin: 5px 20px;
+    vertical-align: middle;
+    text-align: center;
+}
+.buttons:hover{
+    background-color: #20413E;
+    border-color:  #20413E;
+    color: white;
+}
+
+.bottom_text {
+    display: block;
+    font-size: 10px;
+    font-family: seo;
+    text-align: left;
+    color: #34CBC2;
+    border-top: 1px solid #34CBC2;
+    width: 75%;
+    margin-top: 20px;
+    padding-top: 10px;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+
+
+/*-----------------------------------------      TŁO ------------->*/
+body {
+background: #1A1515;
+margin: 0rem;
+min-height: 100vh;
+font-family: Futura, sans-serif;
+}
+
+#canvas, #text {
+position: absolute;
+display: block;
+top: 0;
+left: 0;
+z-index: -1;
+}
+
+#text {
+min-height: 100vh;
+width: 100vw;
+z-index: 1;
+color: #fff;
+text-transform: uppercase;
+font-size: 8vmin;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+}
+
+#text h1 {
+opacity: 0.9;
+}
